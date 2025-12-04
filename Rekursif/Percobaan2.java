@@ -4,9 +4,11 @@ public class Percobaan2 {
     /* FUNGSI STATIC DENGAN NAMA hitungPangkat() */
     static int hitungPangkat(int x, int y) {
         if (y == 0) {
-            return (1);
+            System.out.print("1");
+            return 1;
         } else {
-            return (x * hitungPangkat(x, y - 1));
+            System.out.print(x + "x");
+            return x * hitungPangkat(x, y - 1);
         }
     }
 
@@ -18,7 +20,10 @@ public class Percobaan2 {
         int bilangan = sc.nextInt();
         System.out.print("Pangkat: ");
         int pangkat = sc.nextInt(); 
+
+        System.out.print("Deret: ");
+        int hasil = hitungPangkat(bilangan, pangkat);
         
-        System.out.println(hitungPangkat(bilangan, pangkat));
+        System.out.println(" = " + hasil);
     }
 }
